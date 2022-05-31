@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Many to Many Relationship Eg</h1>
+  <h1>Sauces List</h1>
+    {% for item in sauce_list %}
+  <p>{{ item.name }}</p>
+{% endfor %}
+
+  <h1>Sandwich with Barbeque</h1>
+{% for sandwich in sandwich_list %}
+  <p>{{ sandwich.name }}</p>
+{% endfor %}
+
+  <h1>Sandwich with Mayonnaise</h1>
+{% for item in mayo_sandwich %}
+  <p>{{ item.name }}</p>
+{% endfor %}
+</body>
+</html>
