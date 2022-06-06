@@ -3,11 +3,13 @@ from django.db import models
 
 # Create your models here.
 
+# Model for storing the names of users
 class User(models.Model):
     username = models.CharField(max_length=150)
 
 
-# Establishing Many-to-One Relationship
+# Model for establishing Many-to-One Relationship with the "User" model indicating
+# that a user can have multiple email addresses
 class Contact(models.Model):
     email = models.EmailField()
     user = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name="contacts")
